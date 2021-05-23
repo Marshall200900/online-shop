@@ -1,0 +1,10 @@
+.phones-grid {
+  width: 1000px;
+  background-color: #F8F9FA;
+
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: space-around;
+  
+}

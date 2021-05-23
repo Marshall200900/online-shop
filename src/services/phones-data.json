@@ -1,0 +1,93 @@
+{
+    "phones": [
+        {
+            "id": 1,
+            "name": "iPhone 11",
+            "color-img": [
+                {
+                    "color": "purple",
+                    "rgb": "#D2DBFA",
+                    "img": "https://c.dns-shop.ru/thumb/st4/fit/200/200/018f2951b425776e1a1bc8e4ffaadd04/e896bc09568aa1458edfa640919f60c0e2d4590925ceb07045664135ae03d069.jpg.webp"
+                },
+                {
+                    "color": "white",
+                    "rgb": "#FFFFFF",
+                    "img": "https://c.dns-shop.ru/thumb/st1/fit/200/200/dbe07e6071b7b83ea3cdca7062eb59ac/37428f113c3504aef0266e70db9a032116c248bd764d88b0e62fa1818d62af4f.jpg.webp"
+                },
+                {
+                    "color": "black",
+                    "rgb": "#000000",
+                    "img": "https://c.dns-shop.ru/thumb/st4/fit/200/200/c8e873b69b6e856f826949bffe078331/e0debca5125461d750890b54db6706d7ba8bc2b2bf0e71f706c238a3045b2a5e.jpg.webp"
+                }
+            ],
+            "rom-price": [
+                {
+                    "rom": "128gb",
+                    "price": "54999"
+                },
+                {
+                    "rom": "64gb",
+                    "price": "50999"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "iPhone 12",
+            "color-img": [
+                {
+                    "color": "blue",
+                    "rgb": "#6C7F89",
+                    "img": "https://c.dns-shop.ru/thumb/st4/fit/200/200/6d1acc862ad9766653d99c494a945c10/a783ed8d1666554f67960ec2dfa88df8135d25a7876a1c77de2ed4984255ea09.jpg.webp"
+                },
+                {
+                    "color": "gold",
+                    "rgb": "#FFFFFF",
+                    "img": "https://c.dns-shop.ru/thumb/st1/fit/200/200/4429da85371d2a87ab0a2fd00b1d394a/dd5d3d9d22aa3b0b548d4fa56ad38ce9134620d5b69c166a214bce78ec2bd76f.jpg.webp"
+                },
+                {
+                    "color": "black",
+                    "rgb": "#000000",
+                    "img": "https://c.dns-shop.ru/thumb/st4/fit/200/200/2b43bcb871900288c3cf8acae2b4c79e/2f5a4db066e1d574e7deaecd2f94766356128a9306e1355f198544981290817d.jpg.webp"
+                }
+            ],
+            "rom-price": [
+                {
+                    "rom": "128gb",
+                    "price": "76999"
+                },
+                {
+                    "rom": "256gb",
+                    "price": "80999"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Xiaomi Redmi 9A",
+            "color-img": [
+                {
+                    "color": "green",
+                    "rgb": "#6BC3D4",
+                    "img": "https://c.dns-shop.ru/thumb/st1/fit/200/200/4dd1aa280dd35e209912ccd1cd46db38/bf02a57f79dd12440b9443ae6de8c0e9909957955900acce183db41c145df138.jpg.webp"
+                },
+                {
+                    "color": "blue",
+                    "rgb": "#3CA0F0",
+                    "img": "https://c.dns-shop.ru/thumb/st4/fit/200/200/4219aa1454fafd512c830b77e3020c13/d3901a94c6116cbc8cdc6f8f9c97c2f3b0eb28a3825a561e958f11d7ceeb1b9d.jpg.webp"
+                },
+                {
+                    "color": "gray",
+                    "rgb": "#666666",
+                    "img": "https://c.dns-shop.ru/thumb/st4/fit/200/200/ecc5d226bb974ac3bc2c28890379e755/1e74bd63ea9b050b60dd2d58205718aab0049533370a53fea73097ef6cd9f8c0.jpg.webp"
+                }
+            ],
+            "rom-price": [
+                {
+                    "rom": "32gb",
+                    "price": "8399"
+                }
+            ]
+        }
+    ]
+}
