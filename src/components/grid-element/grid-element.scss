@@ -32,3 +32,39 @@
     }
   }
 }
+
+
+
+.rom-switcher {
+  margin-top: 20px;
+  .btn:nth-child(2) {
+    margin-left: 10px;
+  }
+}
+
+.color-switcher {
+
+  width: 100px;
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .color-wrapper {
+    border-radius: 5px;
+    border: 2px solid black;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  }
+
+  .color {
+    height: 100%;
+    box-shadow: 0 0 2px gray;
+  }
+
+  .picked {
+    border: 4px solid black;
+  }
+}

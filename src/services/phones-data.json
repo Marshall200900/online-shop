@@ -11,7 +11,7 @@
                 },
                 {
                     "color": "white",
-                    "rgb": "#FFFFFF",
+                    "rgb": "#F8F9FA",
                     "img": "https://c.dns-shop.ru/thumb/st1/fit/200/200/dbe07e6071b7b83ea3cdca7062eb59ac/37428f113c3504aef0266e70db9a032116c248bd764d88b0e62fa1818d62af4f.jpg.webp"
                 },
                 {
@@ -22,12 +22,12 @@
             ],
             "rom-price": [
                 {
-                    "rom": "128gb",
-                    "price": "54999"
+                    "rom": "64",
+                    "price": 50999
                 },
                 {
-                    "rom": "64gb",
-                    "price": "50999"
+                    "rom": "128",
+                    "price": 54999
                 }
             ]
         },
@@ -42,7 +42,7 @@
                 },
                 {
                     "color": "gold",
-                    "rgb": "#FFFFFF",
+                    "rgb": "#F8F9FA",
                     "img": "https://c.dns-shop.ru/thumb/st1/fit/200/200/4429da85371d2a87ab0a2fd00b1d394a/dd5d3d9d22aa3b0b548d4fa56ad38ce9134620d5b69c166a214bce78ec2bd76f.jpg.webp"
                 },
                 {
@@ -53,12 +53,12 @@
             ],
             "rom-price": [
                 {
-                    "rom": "128gb",
-                    "price": "76999"
+                    "rom": "128",
+                    "price": 76999
                 },
                 {
-                    "rom": "256gb",
-                    "price": "80999"
+                    "rom": "256",
+                    "price": 80999
                 }
             ]
         },
@@ -84,8 +84,8 @@
             ],
             "rom-price": [
                 {
-                    "rom": "32gb",
-                    "price": "8399"
+                    "rom": "32",
+                    "price": 8399
                 }
             ]
         }

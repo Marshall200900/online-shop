@@ -1,13 +1,32 @@
-.left-panel {
+.filter-panel {
   background-color: #F8F9FA;
-  height: 700px;
   width: 300px;
   margin-right: 20px;
   flex-shrink: 0;
+  padding: 1%;
+
+  border-radius: 10px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+
+  .button-apply {
+    align-self: center;
+  }
+  .btns-row {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
+
 @media screen and (max-width: 850px) {
-  .left-panel {
+  .filter-panel {
     display: none;
   }
 }

@@ -1,12 +1,15 @@
-const initialState = {
-    name: 'Arseniy',
-    age: 20,
-}
+import updateFilters from './filter-panel';
+import updateGrid from './phones-grid';
+import updateSort from './sort-panel';
 
-const reducer = (state = initialState, action) => {
-    switch(action.type) {
-        default: return state;
-    }
+
+const reducer = (state, action) => {
+  return {
+    phones: updateGrid(state, action),
+    filters: updateFilters(state, action),
+    sortAscending: updateSort(state, action)
+  }
+
 }
 
 export default reducer;

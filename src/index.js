@@ -11,9 +11,11 @@ const phonesService = new PhonesService();
 
 const root = (
     <React.StrictMode>
-        <PhonesServiceProvider value={phonesService}>
-            <App />
-        </PhonesServiceProvider>
+        <Provider store={store}>
+          <PhonesServiceProvider value={phonesService}>
+              <App />
+          </PhonesServiceProvider>
+        </Provider>
     </React.StrictMode>
 )
 

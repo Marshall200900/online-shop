@@ -1,10 +1,18 @@
-.phones-grid {
+.content-wrap {
   width: 1000px;
   background-color: #F8F9FA;
+}
 
-
+.phones-grid {
+  border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
   justify-content: space-around;
   
+}
+
+.nocontent-label {
+  font-size: 1rem;
+  color: gray;
+  border: 1px solid;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './app.scss';
 import Navbar from '../navbar';
-import LeftPanel from '../filter-panel';
+import FilterPanel from '../filter-panel';
 import PhonesGrid from '../phones-grid';
 import SortPanel from '../sort-panel';
 
@@ -13,7 +13,7 @@ const App = () => {
             <div className="inner-container">
               <SortPanel />
               <div className="site-container">
-                <LeftPanel />
+                <FilterPanel />
                 <PhonesGrid />
               </div>
             </div>

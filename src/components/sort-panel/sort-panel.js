@@ -1,16 +1,41 @@
 import React, { useState } from 'react';
 import './sort-panel.scss';
-
+import { connect } from 'react-redux';
+import { changeSorting } from '../../actions';
 class SortPanel extends React.Component {
 
   state = {
-    choosenValue: 'Сначала дороже',
-    dropdownValue: 'Сначала дешевле',
+    choosenValue: '',
+    dropdownValue: '',
+  }
+
+  constructor(props) {
+    super(props);
+    
+    this.initValues();
 
   }
 
+  initValues = () => {
+    const { sortAscending } = this.props;
+    if (sortAscending) {
+      this.state = {
+        choosenValue: 'Сначала дешевле',
+        dropdownValue: 'Сначала дороже',
+      };
+    }
+    else {
+      this.state = {
+        choosenValue: 'Сначала дороже',
+        dropdownValue: 'Сначала дешевле',
+      };
+    }
+  }
+
   render(){
+    const { sortAscending } = this.props;
     const { choosenValue, dropdownValue } = this.state;
+    console.log('render');
     return (
       <div className="sort-panel">
         <div className="dropdown">
@@ -25,12 +50,15 @@ class SortPanel extends React.Component {
           <ul className="dropdown-menu" aria-labelledby="dropDownButtonSortBy">
             <li>
               <button className="dropdown-item"
-                onClick={() => this.setState(({choosenValue, dropdownValue}) => {
-                  return {
-                    choosenValue: dropdownValue,
-                    dropdownValue: choosenValue
-                  }
-                })}
+                onClick={() => {
+                  this.setState(({choosenValue, dropdownValue}) => {
+                    return {
+                      choosenValue: dropdownValue,
+                      dropdownValue: choosenValue,
+                    }
+                  })
+                  this.props.dispatch(changeSorting(!sortAscending))
+                }}
               >{dropdownValue}</button></li>
           </ul>
         </div>
@@ -39,4 +67,10 @@ class SortPanel extends React.Component {
   }
 }
 
-export default SortPanel;
+const mapStateToProps = ({sortAscending}) => {
+  return {
+    sortAscending
+  }
+}
+
+export default connect(mapStateToProps)(SortPanel);
