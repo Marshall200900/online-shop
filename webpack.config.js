@@ -10,7 +10,6 @@ module.exports = (env = {}) => {
     
     const isProd = mode === 'production';
     const isDev = mode === 'development';
-    console.log(mode);
 
 
     const getStyleLoaders = (isProd) => {
@@ -96,9 +95,14 @@ module.exports = (env = {}) => {
                 }
             ]
         },
+        output: {
+          path: resolve(__dirname, 'dist'),
+          publicPath: '/'
+        },
         plugins: getPlugins(),
         target: 'web',
         devServer: {
+            historyApiFallback: true,
             open: true,
             liveReload: true,
         }

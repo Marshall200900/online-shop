@@ -1,24 +1,24 @@
 import React from 'react';
 import './app.scss';
 import Navbar from '../navbar';
-import FilterPanel from '../filter-panel';
-import PhonesGrid from '../phones-grid';
-import SortPanel from '../sort-panel';
+import Home from '../../pages/home';
+import Cart from '../../pages/cart';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
 const App = () => {
     return (
         <div className="app">
+          <Router>
           <Navbar />
-          <div className="outer-container">
-            <div className="inner-container">
-              <SortPanel />
-              <div className="site-container">
-                <FilterPanel />
-                <PhonesGrid />
-              </div>
-            </div>
-          </div>
-          
+              <Switch>
+                  <Route exact path="/">
+                    <Home/>
+                  </Route>
+                  <Route path="/cart">
+                    <Cart/>
+                  </Route>
+                </Switch>
+            </Router>          
         </div>
     )
 }

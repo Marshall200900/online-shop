@@ -28,19 +28,18 @@ class PhonesGrid extends React.Component{
     const filteredPhones = this.filterPhones(phones, filters);
     const sortedPhones = this.sortPhones(filteredPhones, sortAscending)
 
-    
+    let result;
 
     if(sortedPhones.length === 0) {
-      return <div className="nocontent-label">Настройте параметры фильтрации для отображения</div>
+      result = <div className="nocontent-label">Настройте параметры фильтрации для отображения</div>
+    }
+    else {
+      result = <div className="phones-grid">{sortedPhones.map((ph, idx) => <GridElement phoneId={ph.id} key={idx}/>)}</div>
     }
     // TODO: починить разметку, при 2 смартфонах и меньше
     return (
       <div className="content-wrap">
-        <div className="phones-grid">
-        {
-          sortedPhones.map((ph, idx) => <GridElement phoneId={ph.id} key={idx}/>)
-        }
-        </div>
+        {result}
       </div>
     )
   }

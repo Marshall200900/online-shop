@@ -1,6 +1,7 @@
 .content-wrap {
   width: 1000px;
   background-color: #F8F9FA;
+  min-height: 200px;
 }
 
 .phones-grid {
@@ -13,6 +14,6 @@
 
 .nocontent-label {
   font-size: 1rem;
+  display: inline;
   color: gray;
-  border: 1px solid;
 }

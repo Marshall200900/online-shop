@@ -1,17 +1,18 @@
 import React from 'react';
 import './grid-element.scss';
 import { connect } from 'react-redux';
-import { changeRom, changeColor } from '../../actions';
+import { changeRom, changeColor, addItemToCart, deleteItemFromCart } from '../../actions';
 
 
-const mapStateToProps = ({phones}, {phoneId}) => {
+const mapStateToProps = ({phones, cart}, {phoneId}) => {
   const phone = phones.find((phone) => phone.id === phoneId);
   return {
     data: phone,
+    addedItems: cart.addedItems
   }
 }
 
-const GridElement = ({ dispatch, data }) => {
+const GridElement = ({ dispatch, data, addedItems }) => {
   console.log('GridElement');
 
   const imageSrc = data['color-img'][data.choosenColor].img;
@@ -41,6 +42,14 @@ const GridElement = ({ dispatch, data }) => {
   const onChangeColor = (colorIndex) => {
     dispatch(changeColor(colorIndex, phoneId));
   }
+  const onAddToCart = () => {
+    console.log('DATATDTATDTA:', data);
+    dispatch(addItemToCart(data));
+  }
+  const onDeleteFromCart = () => {
+    dispatch(deleteItemFromCart(data));
+  }
+  const isAdded = addedItems.find(el => el === data);
 
   return (
     <div className="grid-element">
@@ -50,9 +59,17 @@ const GridElement = ({ dispatch, data }) => {
       <div className="info">
         <span className="name">{name}</span>
         <span className="price">{price}</span>
+        <AddButton onAddToCart={onAddToCart} onDeleteFromCart={onDeleteFromCart} isAdded={isAdded}/>
       </div>
     </div>
   )
+}
+
+const AddButton = ({onAddToCart, onDeleteFromCart, isAdded}) => {
+
+  return isAdded !== undefined ? 
+  <div className="btn btn-primary add-btn" onClick={onDeleteFromCart}>Добавлено!</div> : 
+  <div className="btn btn-dark add-btn" onClick={onAddToCart}>Добавить</div>
 }
 
 const RomSwitcher = ({roms, picked, onChangeRom}) => {

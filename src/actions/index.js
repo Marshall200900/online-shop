@@ -45,8 +45,22 @@ const setDefaultFilters = () => {
     type: 'SET_DEFAULT_FILTERS',
   }
 }
+const addItemToCart = (item) => {
+  return {
+    type: 'ADD_ITEM_TO_CART',
+    payload: item
+  }
+}
+const deleteItemFromCart = (item) => {
+  return {
+    type: 'DELETE_ITEM_FROM_CART',
+    payload: item
+  }
+}
 
 export {
+  addItemToCart,
+  deleteItemFromCart,
   loadPhones,
   changeColor,
   changeSorting,
