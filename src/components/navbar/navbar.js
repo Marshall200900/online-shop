@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = ({addedCount}) => {
 
+
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container-md">

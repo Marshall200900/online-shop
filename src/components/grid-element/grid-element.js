@@ -43,14 +43,14 @@ const GridElement = ({ dispatch, data, addedItems }) => {
     dispatch(changeColor(colorIndex, phoneId));
   }
   const onAddToCart = () => {
-    console.log('DATATDTATDTA:', data);
     dispatch(addItemToCart(data));
   }
   const onDeleteFromCart = () => {
     dispatch(deleteItemFromCart(data));
   }
-  const isAdded = addedItems.find(el => el === data);
 
+  const isAdded = addedItems.find(el => el.id === data.id && el.choosenRom === data.choosenRom && el.choosenColor === data.choosenColor);
+  
   return (
     <div className="grid-element">
       <img src={imageSrc} />
@@ -73,7 +73,6 @@ const AddButton = ({onAddToCart, onDeleteFromCart, isAdded}) => {
 }
 
 const RomSwitcher = ({roms, picked, onChangeRom}) => {
-  console.log('RomSwitcher');
   return (
     <div className="rom-switcher">
       {
@@ -94,7 +93,6 @@ const RomSwitcher = ({roms, picked, onChangeRom}) => {
 }
 
 const ColorSwitcher = ({colors, picked, onChangeColor}) => {
-  console.log('ColorSwitcher');
   return (
     <div className="color-switcher">
       {

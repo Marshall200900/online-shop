@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 
 class PhonesGrid extends React.Component{
   
+
+  
   componentDidMount() {
     this.props.dispatch(loadPhones(this.props.phonesService.getAllPhonesData().phones));
   }
@@ -45,9 +47,9 @@ class PhonesGrid extends React.Component{
   }
 }
 
-const mapStateToProps = ({phones, filters, sortAscending}) => {
+const mapStateToProps = ({filters, sortAscending}) => {
   return {
-    phones, filters, sortAscending
+    filters, sortAscending
   }
 }
 

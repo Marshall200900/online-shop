@@ -57,8 +57,16 @@ const deleteItemFromCart = (item) => {
     payload: item
   }
 }
-
+const changeQuantity = (quantity, item) => {
+  return {
+    type: 'CHANGE_QUANTITY',
+    payload: {
+      quantity, item
+    }
+  }
+}
 export {
+  changeQuantity,
   addItemToCart,
   deleteItemFromCart,
   loadPhones,
